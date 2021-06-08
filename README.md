@@ -12,3 +12,5 @@ powershell scrips used for sysadmin tasks in microsoft active directory
     - If you are removing computers from AD: type `C:\users\nst\Desktop\remove-ad-computers` 
     - If you are disabling users within AD: type `C:\users\nst\Desktop\disable-ad-users`
 6. Run the command and prosper!
+
+**NOTE:** In order to activate the movement of users between Organizational Units in AD, you must __first__ uncomment the command that moves them, and __second__ paste the appropriate `distinguishedName` of the *Disabled Users* OU. 
