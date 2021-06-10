@@ -1,6 +1,6 @@
 ﻿#Import-Module hsg*6
 
-$programs=Get-Content C:\users\Andrew\Documents\powershell-scripts\uninstallprog.txt
+$programs=Get-Content C:\users\nst\Desktop\uninstallprog.txt
 
 ForEach ($prog in $programs)
 
