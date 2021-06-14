@@ -14,8 +14,8 @@ powershell scrips used for batch sysadmin tasks in microsoft active directory
 ## Running AD Management Scripts
 1. Create a text file with the users or computers that need to be managed. Each usename or hostname should be on its own line. 
     - If you are *removing* computers from AD, name the file `deletecomputers.txt`
-    - If you are *deleting* computers from AD, name the file `removecomputers.txt` 
-    - If you are disabling users within AD, name the file `removeusers.txt`
+    - If you are *disabling* computers from AD, name the file `removecomputers.txt` 
+    - If you are *disabling* users within AD, name the file `removeusers.txt`
 2. Log in to the remote Domain Controller as a domain administrator.
 3. Copy the appropriate PowerShell script and text file for the action being completed onto the remote DC’s desktop.
 4. Run a new PowerShell window as administrator
