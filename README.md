@@ -9,7 +9,8 @@ powershell scrips used for batch sysadmin tasks in microsoft active directory
 - `remove-ad-computers.ps1` Permanantly removes and deletes computers from Active Directory.
 - `disable-ad-computers.ps1` Disables computers within AD and *optionally* moves them to the "disabled computers" OU. *see the note below for additional steps required to allow this functionality. It is disabled by default.*
 - `disable-ad-users.ps1` Disables user accounts within AD and *optionally* moves them to the "disabled users" OU. *see the note below for additional steps required to allow this functionality. It is disabled by default.*
-- **NEW** `remove-programs.ps1` Uninstalls programs on a specific machine. *Coming soon: Uninstall a list of progrms on multiple machines at once!*
+- `remove-programs.ps1` Uninstalls programs on a specific machine. *Coming soon: Uninstall a list of progrms on multiple machines at once!*
+- `delete-old-files.ps1` Removes files older than `x` number of days from a specific folder. This also recurses through the folder and deletes files in child folders, as well as empty folders.
 
 ## Running AD Management Scripts
 1. Create a text file with the users or computers that need to be managed. Each usename or hostname should be on its own line. 
@@ -34,3 +35,12 @@ powershell scrips used for batch sysadmin tasks in microsoft active directory
 4. Run a new PowerShell window as an administrator.
 5. In the window, type `C:\users\[admin username]\Desktop\remove-programs.ps1`
 6. Run the command and go out for lunch. This process might take a while.
+
+## Running File Deletion Script
+1. Locate the directory with old files that you want to delete.
+2. Copy the `delete-old-files.ps1` script onto the desktop of your compter.
+3. Open a new PowerShell window.
+4. In the new PowerShell type `cd C:\Users\[username]\Desktop`, then press enter.
+5. Then, type `.\delete-old-files.ps1 <directory with files to be deleted> <minimum age of files to be deleted (in days)>` and press enter.
+6. You should see output on the screen that the script is deleting items.
+7. You may be promped to delete empty folders. Feel free to say "yes" this prompt.
