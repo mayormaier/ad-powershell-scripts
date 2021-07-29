@@ -2,8 +2,10 @@ $Folder = $args[0]
 $Days = $args[1]
 
 #Create log file
-cd ..
-New-Item -Path . -Name "deleteLog.txt" -ItemType "file" 
+Set-Location ..
+If (!(Test-Path -Path ..\deleteLog.txt -PathType Leaf)){
+   New-Item -Path . -Name "deleteLog.txt" -ItemType "file"
+} 
 
 #Delete files older than x months (user cli args)
 Get-ChildItem $Folder -Recurse -Force -ea 0 |
